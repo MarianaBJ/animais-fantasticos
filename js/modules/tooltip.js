@@ -1,11 +1,6 @@
 export default class Tooltip {
     constructor(data) {
         this.tooltips = document.querySelectorAll(data);
-
-        this.tooltips.forEach(item => {
-            item.addEventListener('mouseover', this.onMouseOver)
-        });
-
         this.onMouseLeave = this.onMouseLeave.bind(this);
         this.onMouseMove = this.onMouseMove.bind(this);
         this.onMouseOver = this.onMouseOver.bind(this);
