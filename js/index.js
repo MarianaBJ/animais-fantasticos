@@ -4,7 +4,7 @@ import Accordion from './modules/accordion.js';
 import TabNav from './modules/navTab.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
-import initDropDown from './modules/dropdown.js';
+import DropDown from './modules/dropdown.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initDate from './modules/funcionamento.js';
 import fetchAnimais from './modules/fetch-animais.js';
@@ -28,7 +28,9 @@ tooltip.init();
 const scrollAnima = new ScrollAnimation('[data-anime="scroll"]');
 scrollAnima.init();
 
-initDropDown();
+const dropdownMenu = new DropDown('[data-dropdown]');
+dropdownMenu.init();
+
 initDate();
 initMenuMobile();
 fetchAnimais('../animaisApi.json', '.numeros-grid');
