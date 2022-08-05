@@ -1,5 +1,5 @@
 import ScrollSuave from './modules/scroll-suave.js';
-import initScrollAnimation from './modules/animacao-scroll.js';
+import ScrollAnimation from './modules/scroll-anima.js';
 import Accordion from './modules/accordion.js';
 import TabNav from './modules/navTab.js';
 import Modal from './modules/modal.js';
@@ -25,7 +25,9 @@ modal.init();
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
-initScrollAnimation();
+const scrollAnima = new ScrollAnimation('[data-anime="scroll"]');
+scrollAnima.init();
+
 initDropDown();
 initDate();
 initMenuMobile();
